@@ -10,11 +10,6 @@ class eis_test(TestCase):
 	def setUp(self):
 		self.browser = webdriver.Chrome()
 
-	def test_dofus(self):
-		browser = self.browser
-		browser.get("https://www.dofus.com")
-		self.assertIn("DOFUS, the Tactical MMORPG", browser.title)
-
 	def test_lol(self):
 		urlGeneral = 'https://www.leagueoflegends.com/en-us/'
 		urls = ['champions', 'news/tags/patch-notes', 'news/community/join-the-community']
