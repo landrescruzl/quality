@@ -39,9 +39,8 @@ class eis_test(TestCase):
 		sleep(5)
 		name = browser.find_element(By.ID, 'page-header')
 		self.assertIn('RODRIGO ANDRÉS', name.text)
-		pfp = browser.find_element(By.ID, 'user-menu-toggle')
 		res = browser.find_element(By.LINK_TEXT, 'Cerrar sesión')
-		hover = ActionChains(browser).move_to_element(pfp).move_to_element(res).click()
+		hover = ActionChains(browser).move_to_element(res).click()
 		hover.perform()
 		sleep(5)
 		url = browser.current_url
